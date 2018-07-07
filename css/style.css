@@ -38,6 +38,23 @@ p {
   margin-bottom: 1.5em;
 }
 
+td, th {
+    text-align: left;
+    padding: 2px;
+
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+tr {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    border-collapse: collapse;
+
+}?
+
 h1, h2, h3, h4, h5, h6 {
   color: #000;
 
