@@ -1,2 +1,2 @@
-# GiugnoLab
-GiugnoLab site
+# InfOmics
+InfOmics site
