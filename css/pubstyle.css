@@ -1,0 +1,51 @@
+/* publication page */
+.pub_url {
+  font-weight: bold;
+  font-size: 13px;
+  margin-left: 15px;
+}
+
+a:link {
+  color: blue;
+  text-decoration: none;
+}
+
+a:visited {
+  color: purple;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+p4:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.title {
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  margin-left: 15px;
+}
+
+.journal {
+  font-size: 13px;
+  margin-left: 15px;
+}
+
+.author {
+  font-weight: bold;
+  font-size: 13px;
+  margin-left: 10px;
+}
+
+.references {
+  color: blue;
+  font-weight: bold;
+  font-size: 13px;
+  margin-left: 15px;
+}
