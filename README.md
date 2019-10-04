@@ -1,2 +1,2 @@
 # InfOmics
-InfOmics site
+InfOmics website
