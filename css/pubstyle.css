@@ -29,7 +29,7 @@ p4:hover {
   color: black;
   font-weight: bold;
   font-size: 16px;
-  margin-left: 15px;
+  margin-left: 5px;
 }
 
 .journal {
@@ -41,7 +41,7 @@ p4:hover {
   font-weight: bold;
   font-size: 13px;
   margin-left: 10px;
-  margin-top:20px;
+  margin-top: 20px;
 }
 
 .references {
