@@ -49,3 +49,7 @@ p4:hover {
   font-size: 13px;
   margin-left: 15px;
 }
+
+li {
+  padding: 15px 0 0 0;
+}

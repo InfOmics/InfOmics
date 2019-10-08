@@ -53,14 +53,14 @@ function composeArticle (entryId, entryValues) {
 
 	var template = "";
 	var journalInfo = "";
-	var journalValues = [entryValues.year, entryValues.volume, entryValues.pages];
+	var journalValues = [entryValues.year, entryValues.volume, entryValues.number, entryValues.pages];
 	for (var k=0; k<journalValues.length; k++) {
 		if (journalValues[k] !== undefined && journalValues[k] !== "") {
 			journalInfo += journalValues[k];
-			if (k==0) {
-				journalInfo += ";";
-			} else if (k==1) {
+			if (k==1) {
 				journalInfo += ":";
+			} else {
+				journalInfo += ";";
 			}
 		}
 	}
@@ -68,14 +68,14 @@ function composeArticle (entryId, entryValues) {
 	if (entryValues.url !== undefined && entryValues.url !== "") {
 	template += "<li>" + entryValues.author + "</li>" + 
 			"<p1>" + entryValues.title + "</p1><br>" + 
-			"<p2>" + entryValues.journal + journalInfo + "</p2><br>" + 
+			"<p2>" + entryValues.journal + journalInfo + entryValues.doi + "</p2><br>" + 
 			"<p3> <a href=\"" + entryValues.url +  "\">(view online)</a> </p3>	" +
-			"<p4>(download reference)</p4>" ;
+			"<p4>(download reference)</p4> " ;
 
 	} else {
 		template += "<li>" + entryValues.author + "</li>" + 
 				"<p1>" + entryValues.title + "</p1><br>" + 
-				"<p2>" + entryValues.journal + journalInfo + "</p2><br>" +
+				"<p2>" + entryValues.journal + journalInfo + entryValues.doi + "</p2><br>" +
 				"<p4>(download reference)</p4>" ;
 	}
 
@@ -93,7 +93,7 @@ function composeBook (entryId, entryValues) {
 	}
 
 	var journalInfo = "";
-	var journalValues = [entryValues.edition, entryValues.year, entryValues.volume, entryValues.pages, entryValues.number];
+	var journalValues = [entryValues.edition, entryValues.year, entryValues.volume, entryValues.pages];
 	for (var k=0; k<journalValues.length; k++) {
 		if (journalValues[k] !== undefined && journalValues[k] !== "") {
 			/*if (journalValues[k] == entryValues.edition) {
@@ -111,13 +111,13 @@ function composeBook (entryId, entryValues) {
 	if (entryValues.url !== undefined && entryValues.url !== "") {
 	template += "<li>" + entryValues.author + "</li>" + 
 			"<p1>" + entryValues.title + "</p1><br>" + 
-			"<p2>" + entryValues.journal + journalInfo + "</p2><br>" + 
+			"<p2>" + entryValues.journal + journalInfo + "," + entryValues.doi + "</p2><br>" + 
 			"<p3> <a href=\"" + entryValues.url +  "\">(view online)</a> </p3>	" +
 			"<p4>(download reference)</p4>" ;
 	} else {
 		template += "<li>" + entryValues.author + "</li>" + 
 				"<p1>" + entryValues.title + "</p1><br>" + 
-				"<p2>" + entryValues.journal + journalInfo + "</p2><br>	" +
+				"<p2>" + entryValues.journal + journalInfo + "," + entryValues.doi + "</p2><br>	" +
 				"<p4>(download reference)</p4>" ;
 	}
 
@@ -149,13 +149,13 @@ function composeConference (entryId, entryValues) {
 	if (entryValues.url !== undefined && entryValues.url !== "") {
 	template += "<li>" + entryValues.author + "</li>" + 
 			"<p1>" + entryValues.title + "</p1><br>" + 
-			"<p2>" + entryValues.journal + entryValues.date + ", " + entryValues.location + ". " + journalInfo + "</p2><br>" + 
+			"<p2>" + entryValues.journal + entryValues.date + ", " + entryValues.location + ". " + journalInfo + "," + entryValues.doi + "</p2><br>" + 
 			"<p3> <a href=\"" + entryValues.url +  "\">(view online)</a> </p3>	" +
 			"<p4>(download reference)</p4>" ;
 	} else {
 		template += "<li>" + entryValues.author + "</li>" + 
 				"<p1>" + entryValues.title + "</p1><br>" + 
-				"<p2>" + entryValues.journal + entryValues.date + ", " + entryValues.location + ". " + journalInfo + "</p2><br>	" +
+				"<p2>" + entryValues.journal + entryValues.date + ", " + entryValues.location + ". " + journalInfo + "," + entryValues.doi + "</p2><br>	" +
 				"<p4>(download reference)</p4>" ;
 	}
 
@@ -315,13 +315,13 @@ function readEntry (entry) {
 	} else if (entry.match(/^@book/m)) {
 		var entryValues = { "type": "book", "title": "", "author": "", "edition": "","url": "", "doi": "", "isbn": "", "year": "", "date": "", "journal": "", "volume": "", "pages": "", "publisher": "", "keywords": "", "pubstate": "", "tppubtype": "" }; 
 	} else if (entry.match(/^@inproceedings/m)) {
-		var entryValues = { "type": "inproceedings", "title": "", "author": "", "year": "", "journal": "", "organization": "", "location": "", "pages": "", "publisher": ""}; 
+		var entryValues = { "type": "inproceedings", "title": "", "author": "", "doi": "", "url": "", "year": "", "journal": "", "organization": "", "location": "", "pages": "", "publisher": ""}; 
 	} else if (entry.match(/^@conference/m)) {
 		var entryValues = { "type": "conference", "title": "", "author": "", "url": "", "doi": "", "isbn": "", "year": "", "date": "", "location": "", "journal": "", "volume": "", "pages": "", "publisher": "", "keywords": "", "pubstate": "", "tppubtype": "" }; 
 	} else if (entry.match(/^@incollection/m)) {
-		var entryValues = { "type": "incollection", "title": "", "author": "", "year": "", "journal": "", "pages": "", "publisher": ""}; 
+		var entryValues = { "type": "incollection", "title": "", "author": "", "doi": "", "number": "", "year": "", "journal": "", "pages": "", "publisher": ""}; 
 	} else if (entry.match(/^@misc/m)) {
-		var entryValues = { "type": "misc", "title": "", "author": "", "year": "", "journal": "", "pages": "", "publisher": ""}; 
+		var entryValues = { "type": "misc", "title": "", "author": "", "doi": "", "number": "", "year": "", "journal": "", "pages": "", "publisher": ""}; 
 	}
 	
 	var lines = entry.split(/\n/);
