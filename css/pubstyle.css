@@ -1,9 +1,4 @@
 /* publication page */
-.pub_url {
-  font-weight: bold;
-  font-size: 13px;
-  margin-left: 15px;
-}
 
 a:link {
   color: blue;
@@ -29,19 +24,25 @@ p4:hover {
   color: black;
   font-weight: bold;
   font-size: 16px;
-  margin-left: 5px;
+  margin-left: 15px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .journal {
   font-size: 13px;
   margin-left: 15px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .author {
   font-weight: bold;
   font-size: 13px;
-  margin-left: 10px;
-  margin-top: 20px;
+  margin-left: 15px;
+  padding-top: 20px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .references {
@@ -51,6 +52,13 @@ p4:hover {
   margin-left: 15px;
 }
 
+.pub_url {
+  font-weight: bold;
+  font-size: 13px;
+  margin-left: 15px;
+}
+
 li {
-  padding: 15px 0 0 0;
+  list-style-type: none;
+  padding-top: 25px;
 }

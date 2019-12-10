@@ -70,13 +70,13 @@ function composeArticle (entryId, entryValues) {
 			"<p1>" + entryValues.title + "</p1><br>" + 
 			"<p2>" + entryValues.journal + journalInfo + entryValues.doi + "</p2><br>" + 
 			"<p3> <a href=\"" + entryValues.url +  "\">(view online)</a> </p3>	" +
-			"<p4>(download reference)</p4> " ;
+			"<p4>(download reference)</p4><br>" ;
 
 	} else {
 		template += "<li>" + entryValues.author + "</li>" + 
 				"<p1>" + entryValues.title + "</p1><br>" + 
 				"<p2>" + entryValues.journal + journalInfo + entryValues.doi + "</p2><br>" +
-				"<p4>(download reference)</p4>" ;
+				"<p4>(download reference)</p4><br>" ;
 	}
 
 	return template;
@@ -113,12 +113,12 @@ function composeBook (entryId, entryValues) {
 			"<p1>" + entryValues.title + "</p1><br>" + 
 			"<p2>" + entryValues.journal + journalInfo + "," + entryValues.doi + "</p2><br>" + 
 			"<p3> <a href=\"" + entryValues.url +  "\">(view online)</a> </p3>	" +
-			"<p4>(download reference)</p4>" ;
+			"<p4>(download reference)</p4><br>" ;
 	} else {
 		template += "<li>" + entryValues.author + "</li>" + 
 				"<p1>" + entryValues.title + "</p1><br>" + 
 				"<p2>" + entryValues.journal + journalInfo + "," + entryValues.doi + "</p2><br>	" +
-				"<p4>(download reference)</p4>" ;
+				"<p4>(download reference)</p4><br>" ;
 	}
 
 	return template;
@@ -151,12 +151,12 @@ function composeConference (entryId, entryValues) {
 			"<p1>" + entryValues.title + "</p1><br>" + 
 			"<p2>" + entryValues.journal + entryValues.date + ", " + entryValues.location + ". " + journalInfo + "," + entryValues.doi + "</p2><br>" + 
 			"<p3> <a href=\"" + entryValues.url +  "\">(view online)</a> </p3>	" +
-			"<p4>(download reference)</p4>" ;
+			"<p4>(download reference)</p4><br>" ;
 	} else {
 		template += "<li>" + entryValues.author + "</li>" + 
 				"<p1>" + entryValues.title + "</p1><br>" + 
 				"<p2>" + entryValues.journal + entryValues.date + ", " + entryValues.location + ". " + journalInfo + "," + entryValues.doi + "</p2><br>	" +
-				"<p4>(download reference)</p4>" ;
+				"<p4>(download reference)</p4><br>" ;
 	}
 
 	return template;
@@ -203,7 +203,6 @@ function readField (line) {
 	line = line.replace(regex, "}");
 	regex = /\\\&/g;
 	line = line.replace(regex, "&");
-
 	regex = /\{\\\"a\}/g;
 	line = line.replace(regex, "&#228");
 	regex = /\{\\\"e\}/g;
@@ -235,8 +234,7 @@ function readField (line) {
 	line = line.replace(regex, "&#250");
 	regex = /\{\\\`u\}/g;
 	line = line.replace(regex, "ù");
-
-		
+  		
 	var field = {"name": "", "value": ""};
 	line = line.split(" ");
 	var re = new RegExp("=");
@@ -334,8 +332,6 @@ function readEntry (entry) {
 }
 
 function readBibFile (data) {
-	//var fs = require('fs'); 
-	//var data = fs.readFileSync(data, 'utf8')
 
 	var lines = data.split(/\n/);
 	var count = (data.match(/^@/gm) || []).length;
