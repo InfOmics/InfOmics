@@ -1,214 +1,117 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--
-Design by TEMPLATED
-http://templated.co
-Released for free under the Creative Commons Attribution License
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>InfOmics</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
+	<meta name="keywords" content="free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="FreeHTML5.co" />
 
-Name       : Reciprocal 
-Description: A two-column, fixed-width design with dark color scheme.
-Version    : 1.0
-Released   : 20140119
 
--->
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Varela+Round" rel="stylesheet" />
-<link href="css/homepage.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/fonts.css" rel="stylesheet" type="text/css" media="all" />
-<!--[if IE 6]>
-<link href="default_ie6.css" rel="stylesheet" type="text/css" />
-<![endif]-->
-</head>
 
-<head>
-	<!-- code for slideshow in 'News from our Lab section'-->
-	<title>Slideshow</title>
-	<script type="text/javascript">
-		var idx = 1;
-		var timer = null;
-		showSlides(idx);
-		
-		//move slide index
-		function plusSlides(n) {
-			clearTimeout(timer);
-			showSlides(idx += n);
-		}
 
-		//thumbnail image control
-		function currentSlide(n) {
-			clearTimeout(timer);
-			showSlides(idx = n);
-		}
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
 
-		//slide show core function
-		function showSlides(n) {
-			var i;
-			var slides = document.getElementsByClassName("mySlides");
-			var dots = document.getElementsByClassName("dot");
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
 
-			if (n == undefined){n = ++idx}
-			if (n > slides.length) {idx = 1}
-			if (n < 1) {idx = slides.length}
-			
-			for(i = 0; i < slides.length; i++)
-			{
-				slides[i].style.display = "none";
-			}
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
 
-			for (i = 0; i < dots.length; i++) {
-      			dots[i].className = dots[i].className.replace(" active", "");
-  			}
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/gif" href="images/favicon.gif">
 
-			slides[idx - 1].style.display = "block";
-			dots[idx - 1].className += " active"
-		
-			timer = setTimeout(showSlides, 4000);
-		}
+	</head>
 
-	</script>
-
-</head>
-
-<body onload="showSlides()">
-<div id="wrapper">
-	<div id="header-wrapper">
-		<div id="header" class="container">
-			<div id="logo">
-				<img src="./images/homepage/infomics_main.png" width="500" height="200" alt="InfOmics" />
-			</div>
-			<div id="logounivr">
-				<a href="./https://www.di.univr.it/?lang=en">
-					<img src="images/homepage/univr_symb.png" width="200" height="55" alt="Università degli studi di Verona" />
-				</a>	
-			</div> 
-			<div id="social">
-				<ul class="contact">
-					<li><a href="https://github.com/InfOmics" class="icon icon-github"><span>github</span></a></li>
-					<li><a href="#" class="icon icon-linkedin"><span>Linkedin</span></a></li>
-					<li><a href="#" class="icon icon-twitter"><span>Twitter</span></a></li>
-					<li><a href="#" class="icon icon-facebook"><span></span></a></li>
+	<body>
+	<div id="fh5co-page">
+		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+		<aside id="fh5co-aside" role="complementary" class="border js-fullheight">
+                           
+			<h1 id="fh5co-logo" style="font-size:17px"><a href="index.html" style="color:black;" ><img src="images/dna4.png" width="40%" ><br>InfOmics</a></h1>
+                          <br>
+			<nav id="fh5co-main-menu" role="navigation">
+				<ul>
+					<li class="fh5co-active"><a href="index.html">Home</a></li>
+					<li><a href="team.html">Team</a></li>
+					<li><a href="publication.html">Publication</a></li>
+					<li><a href="software.html">Software</a></li>
+					<li><a href="joinus.html">Join us</a></li>
+					<li><a href="contact.html">Contact</a></li>
 				</ul>
+			</nav>
+
+			<div class="fh5co-footer">
+				<p> <a href="http://www.di.univr.it/?lang=en" target="black"> <img src="images/logoUnivr.png" width="80%"> </a> <br>
+                                  <a href="https://github.com/InfOmics" target="black"> <img src="images/github.png" width="40px"> </a>   </p>
 			</div>
-		</div>
-		<div id="menu" class="container">
-			<ul>
-				<li class="current_page_item"><a href="./index.html" accesskey="1" title="">Homepage</a></li>
-				<li><a href="research/index.html" title="">Research</a></li>
-				<li><a href="people/index.html" title="">People</a></li>
-				<li><a href="#" accesskey="2" title="">Publications</a></li>
-				<li><a href="#" accesskey="3" title="">Released Softwares</a></li>
-				<li><a href="#" accesskey="5" title="">Contact Us</a></li>
-			</ul>
+
+		</aside>
+
+		<div id="fh5co-main">
+
+
+			<div class="fh5co-narrow-content" style="padding-top:40px">
+				<div class="row">
+					<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+						<h1 class="fh5co-heading-colored">Description</h1>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+						<p class="fh5co-lead">The focus of our research is mainly on biological network modeling, perturbation and analysis and classification of phenotypes by coding and non-coding expression. Our research goes from Genome to Network analysis in order to understand biological systems under specific conditions. In particular, we develop algorithms for searching in labeled directed and undirected graphs or multigraphs. Up to date, we have designed ones of the fastest algorithms for subgraph database search, subgraph matching with or without redundancy on the results. We have addressed the problem of finding significant unusually subneworks, named motifs, overcoming to the consuming step of network simulation by providing analytical models. Our algorithms are the basis to understand the topological proprieties of biological systems. In order to analyze their dynamics, we model signaling and metabolic pathways by using languages, techniques, and tools well established in the context of electronic design automation. Our intuition here is that several characteristics and issues to model biological systems are common to the electronics system modelling, such as concurrency, reactivity, abstraction levels, as well as state space explosion during validation. We study static and dynamic network characteristics by associating to nodes profiles information from genomic and trascriptomic data. We work both with bulk and single cell data. Here we customize and develop pipelines for genomic variants detections and annotation, for coding and non coding deferential analysis. We also design predict models that from data expression construct network of interactions in particular for small, circular, circulate RNA interferences.
+We study new theoretical methods aimed at investigating biological sequences by using information theory, algorithmic approaches and advanced data structure engineering, from DNA to RNA level. The goal is reached by defining mathematical representations that characterize biological sequences and that allow us to investigate single molecule properties as well as to examine the composition of set of sequences. Our algorithms are developed sequential and in several cases, also in parallel (multicore or GPU). 
+Our studies produce software and data available for the open research development and distributed in the appropriate platforms (web based, Cytoscape and R).</p>
+						<p style="text-align:center"><a href="https://github.com/InfOmics" class="btn btn-primary btn-outline">Github site</a></p>
+					</div>
+					
+				</div>
+			</div>
+
 		</div>
 	</div>
-	<div id="page" class="container">
-		<div class="column1">
-			<div class="title">
-				<h2>Our Mission</h2>
-			</div>
-			<p>
-				<strong>TO DO:</strong>
-				Add a brief description of our research. We can also insert an image.
-			</p>
-			<a href="./research/index.html" class="button">Continue to our research</a>
 
-			<div class="title">
-				<h3>Join our Lab</h3>
-			</div>
-			<img src="images/joinus/hiring.jpeg" width="560", height="250">
-			<p>
-				We are looking for postdocs and students excited about computational challenges 
-				in genomics, transcriptomics, single cell analysis, genome editing and network analysis.
-			</p>
-			<a href="joinus/index.html" class="button">See the full description here</a>
-		</div>
-		<div class="column2">
-			<div class="title">
-				<h2>News from our lab</h2>
-			</div>
-			<!-- Slideshow container -->
-			<div class="slideshow-container">
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Stellar -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Counters -->
+	<script src="js/jquery.countTo.js"></script>
 
-				<!-- Full-width images with number and caption text -->
-				<div class="mySlides fade">
-					<div class="numbertext">1 / 3</div>
-					<img src="images/news/Computational Approaches for Biomarker Detection and Precision Therapeutics in Cancers.png" width="482" height="280">
-					<div class="text">Caption Text</div>
-				</div>
-			
-				<div class="mySlides fade">
-					<div class="numbertext">2 / 3</div>
-					<img src="images/pic02.jpg" width="482" height="280">
-					<div class="text">Caption Two</div>
-				</div>
-			
-				<div class="mySlides fade">
-					<div class="numbertext">3 / 3</div>
-					<img src="images/pic01.jpg" width="482" height="280">
-					<div class="text">Caption Three</div>
-				</div>
-			
-				<!-- Next and previous buttons -->
-				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-				<a class="next" onclick="plusSlides(1)">&#10095;</a>
-			</div>
-			<br>
-			
-			<!-- dots -->
-			<div style="text-align:center">
-				<span class="dot" onclick="currentSlide(1)"></span>
-				<span class="dot" onclick="currentSlide(2)"></span>
-				<span class="dot" onclick="currentSlide(3)"></span>
-			</div>
-			<br>
+	
+	<!-- MAIN JS -->
+	<script src="js/main.js"></script>
 
-			<!---img id = "pic" src="images/Computational Approaches for Biomarker Detection and Precision Therapeutics in Cancers (1).png" width="582" height="300" alt="" />
-			<p>Phasellus tempor vehicula justo. Aliquam lacinia metus ut elit.</p--->
-			<a href="./news/index.html" class="button">Read all news</a>
-		</div>
-	</div>
-	<div id="portfolio-wrapper">
-		<div id="portfolio" class="container">
-			<div class="title">
-				<h2>Aenean elementum</h2>
-				<span class="byline">Integer sit amet pede vel arcu aliquet pretium</span> </div>
-			<div class="column1">
-				<div class="box">
-					<span class="icon icon-cloud-download"></span>
-					<h3>Vestibulum venenatis</h3>
-					<p>Fermentum nibh augue praesent a lacus at urna congue rutrum.</p>
-					<a href="#" class="button">Etiam posuere</a> </div>
-			</div>
-			<div class="column2">
-				<div class="box">
-					<span class="icon icon-coffee"></span>
-					<h3>Praesent scelerisque</h3>
-					<p>Vivamus fermentum nibh in augue praesent urna congue rutrum.</p>
-					<a href="#" class="button">Etiam posuere</a> </div>
-			</div>
-			<div class="column3">
-				<div class="box">
-					<span class="icon icon-globe"></span>
-					<h3>Donec dictum metus</h3>
-					<p>Vivamus fermentum nibh in augue praesent urna congue rutrum.</p>
-					<a href="#" class="button">Etiam posuere</a> </div>
-			</div>
-			<div class="column4">
-				<div class="box">
-					<span class="icon icon-dashboard"></span>
-					<h3>Mauris vulputate dolor</h3>
-					<p>Rutrum fermentum nibh in augue praesent urna congue rutrum.</p>
-					<a href="#" class="button">Etiam posuere</a> </div>
-			</div>
-		</div>
-	</div>
-</div>
-<div id="footer">
-	<p>&copy; Untitled. All rights reserved. Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>. Photos by <a href="http://fotogrph.com/">Fotogrph</a>.</p>
-</div>
-</body>
+	</body>
 </html>
+
