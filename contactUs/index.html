@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!--
+
+Name: index.html (contactUs main page)
+Author: Manuel Tognon <manuel.tognon@univr.it>
+Description: Container-based page displaying lab location on google map and 
+                lab contact infos (direction board, address, email addresses)
+Version: 1.0.0
+
+__________________________________________________________________
+| FOR CREDITS ON THE TEMPLATE LOOK AT THE BOTTOM OF THIS DOCUMENT |
+------------------------------------------------------------------
+
+Page struture:
+
+                        Map
+                     ____________________
+                    |                    |         
+                    |                    |      
+                     --------------------
+
+                     address    board
+                                    emails
+                     
+
+For any info on how integrate google maps map see https://developers.google.com/maps/documentation/javascript/adding-a-google-map#maps_add_map-javascript
+
+Note that map has been add in JS.
+
+********************************************************************************************************************
+TO MODIFY ANITHING ==> Write your code chunk and MAKE A PULL REQUEST ON GITHUB
+********************************************************************************************************************
+-->
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Varela+Round" rel="stylesheet" />
+<link href="../css/contactUs.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/fonts.css" rel="stylesheet" type="text/css" media="all" />
+<!--[if IE 6]>
+<link href="default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+</head>
+
+
+<!--
+    Link to JS script building the map and centering it on lab location
+-->
+<head>
+    <!-- API key to link with infomics billing account -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA077cfY0WXDsKaQM9ndx3ROXA2zNFfMxQ&callback=getMap" defer></script>
+    <!-- load JS script -->
+    <script src="../js/labLocOnGmaps.js"></script>
+</head>
+
+
+<div id="wrapper">
+    
+    
+    <!--
+        ***************************************************
+        Upper page header begin
+        ***************************************************
+    --> 
+	<div id="header-wrapper">
+		<div id="header" class="container">
+			<div id="logo">
+				<img src="../images/homepage/infomics_main.png" width="500" height="200" alt="InfOmics" />
+			</div>
+			<div id="logounivr">
+				<a href="./https://www.di.univr.it/?lang=en">
+					<img src="../images/homepage/univr_symb.png" width="200" height="55" alt="Università degli studi di Verona" />
+				</a>	
+			</div> 
+			<div id="social">
+				<ul class="contact">
+					<li><a href="https://github.com/InfOmics" class="icon icon-github"><span>Github</span></a></li>
+					<li><a href="#" class="icon icon-linkedin"><span>Linkedin</span></a></li>
+					<li><a href="#" class="icon icon-twitter"><span>Twitter</span></a></li>
+					<li><a href="#" class="icon icon-facebook"><span>Facebook</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="menu" class="container">
+			<ul>
+				<li><a href="../index.html" accesskey="1" title="">Homepage</a></li>
+				<li><a href="../research/index.html" title="">Research</a></li>
+				<li><a href="../people/index.html" title="">People</a></li>
+				<li><a href="#" accesskey="2" title="">Publications</a></li>
+				<li><a href="#" accesskey="3" title="">Released Softwares</a></li>
+				<li class="current_page_item"><a href="./index.html" accesskey="5" title="">Contact Us</a></li>
+			</ul>
+		</div>
+    </div>
+    <!--
+        ***************************************************
+        Upper page header end
+        ***************************************************
+    --> 
+
+	<div id="page" class="container">
+        <div id="map"></div>
+        
+        <br>
+        
+        <div class="column1">
+            <div class="title">
+                <h3> Address </h3>
+                <br>
+                Infomics Lab
+                <br>
+                Strada Le Grazie, 15
+                <br>
+                37134, Verona, Italy
+            </div>
+        </div>
+
+        <div class="column2">
+            <div class="title">
+                <h3> Board </h3>
+                <br>
+                <sp>
+                    <strong>Rosalba Giugno, PhD</strong>
+                    <br>
+                    <i> Associate Professor, CEO </i>
+                    <br>
+                    rosalba.giugno@univr.it
+                </sp>
+                <a href="mailto:rosalba.giugno@univr.it" target="_blank" class="icon icon-envelope"><span class="icons"></span></a>
+                <br>
+                <br>
+                <sp>
+                    <strong>Vincenzo Bonnici, PhD</strong>
+                    <br>
+                    <i> Assistant Professor, Senior Researcher </i>
+                    <br>
+                    vincenzo.bonnici@univr.it
+                </sp>
+                <a href="mailto:vincenzo.bonnici@univr.it" target="_blank" class="icon icon-envelope"><span class="icons"></span></a>
+            </div>
+        </div>
+    </div>
+    
+
+    <!--
+		*****************************
+		Bottom Portfolio begin
+		*****************************
+	-->
+	<div id="portfolio-wrapper">
+		<div id="portfolio" class="container">
+			<div class="title">
+				<h2>Our research Fields</h2>
+				<span class="byline"></span> </div>
+			<div class="column1">
+				<div class="box">
+					<span class="icon icon-desktop"></span>
+					<h3>Bioinformatics</h3>
+				</div>
+			</div>
+			<div class="column2">
+				<div class="box">
+					<span class="icon icon-coffee"></span>
+					<h3>Praesent scelerisque</h3>
+					<p>Vivamus fermentum nibh in augue praesent urna congue rutrum.</p>
+					<a href="#" class="button">Etiam posuere</a> </div>
+			</div>
+			<div class="column3">
+				<div class="box">
+					<span class="icon icon-globe"></span>
+					<h3>Donec dictum metus</h3>
+					<p>Vivamus fermentum nibh in augue praesent urna congue rutrum.</p>
+					<a href="#" class="button">Etiam posuere</a> </div>
+			</div>
+			<div class="column4">
+				<div class="box">
+					<span class="icon icon-dashboard"></span>
+					<h3>Mauris vulputate dolor</h3>
+					<p>Rutrum fermentum nibh in augue praesent urna congue rutrum.</p>
+					<a href="#" class="button">Etiam posuere</a> </div>
+			</div>
+		</div>
+    </div>
+    <!--
+		*****************************
+		Bottom Portfolio end
+		*****************************
+    -->
+    
+
+</div>
+<div id="footer">
+	<p>&copy; Untitled. All rights reserved. Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>. Photos by <a href="http://fotogrph.com/">Fotogrph</a>.</p>
+</div>
+</body>
+</html>
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : Reciprocal 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20140119
+
+-->

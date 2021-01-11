@@ -1,15 +1,35 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!--
-Design by TEMPLATED
-http://templated.co
-Released for free under the Creative Commons Attribution License
 
-Name       : Reciprocal 
-Description: A two-column, fixed-width design with dark color scheme.
-Version    : 1.0
-Released   : 20140119
+Name: GMotterle.html
+Author: Manuel Tognon <manuel.tognon@univr.it>
+Description: Two-column based page to describe Giovanni Motterle
+Version: 1.0.0
 
+__________________________________________________________________
+| FOR CREDITS ON THE TEMPLATE LOOK AT THE BOTTOM OF THIS DOCUMENT |
+------------------------------------------------------------------
+
+Page struture:
+
+    Pic
+_________
+|        |          
+|        |      description
+|        | 
+|        |
+---------
+
+Column1 contains picture 
+
+Column2 contains description
+
+********************************************************************************************************************
+TO MODIFY ANITHING ==> Write your code chunk and MAKE A PULL REQUEST ON GITHUB
+********************************************************************************************************************
 -->
+
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -17,14 +37,23 @@ Released   : 20140119
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Varela+Round" rel="stylesheet" />
-<link href="../css/research.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/people.css" rel="stylesheet" type="text/css" media="all" />
 <link href="../css/fonts.css" rel="stylesheet" type="text/css" media="all" />
 <!--[if IE 6]>
 <link href="default_ie6.css" rel="stylesheet" type="text/css" />
 <![endif]-->
 </head>
 <body>
+
+
 <div id="wrapper">
+
+
+    <!--
+        ***************************************************
+        Upper page header begin
+        ***************************************************
+    --> 
 	<div id="header-wrapper">
 		<div id="header" class="container">
 			<div id="logo">
@@ -48,41 +77,67 @@ Released   : 20140119
 			<ul>
 				<li><a href="../index.html" accesskey="1" title="">Homepage</a></li>
 				<li><a href="../research/index.html" title="">Research</a></li>
-				<li><a href="../people/index.html" title="">People</a></li>
+				<li><a href="./index.html" title="">People</a></li>
 				<li><a href="#" accesskey="2" title="">Publications</a></li>
 				<li><a href="#" accesskey="3" title="">Released Softwares</a></li>
 				<li><a href="#" accesskey="5" title="">Contact Us</a></li>
 			</ul>
 		</div>
-	</div>
+    </div>
+    <!--
+        ***************************************************
+        Upper page header end
+        ***************************************************
+    --> 
+
+
+    <!--
+        ***************************************************
+        GMotterle.html content begin
+        ***************************************************
+    --> 
 	<div id="page" class="container">
-        <img src="../images/joinus/hiring.jpeg" width="700" height="300">
-		<div class="title"> 
-			<h2> Infomics Lab is recruting </h2> 
+
+
+        <!--
+            Put picture here (size 400x400) ==> please use the same size for the
+            other lab members, too
+        -->
+		<div class="column1">
+            <img src="../images/people/GMotterle.jpg" width="400" height="400" alt="GMotterle" />
+            <div>
+                <sp>Giovanni Motterle</sp>
+                <br> <!-- force newline -->
+                <sp><i>Researcher</i></sp>
+            </div>
+        </div>
+        
+
+        <!--
+            Put description here
+        -->
+		<div class="column2" style="text-align: left;">
+            <p>
+                Giovanni Motterle joined the lab in November 2020 as a research fellow. He received his 
+                bachelor's degree in computer science from the University of Padova and his master's degree 
+                in medical bioinformatics from the University of Verona. His research activities are focused 
+                on the development of computational methods for transcriptomics and spatial transcriptomics 
+                data analysis. In his free time he enjoys reading, gardening and hiking.
+            </p>
 		</div>
-		<p> 
-            We are looking for postdocs and students excited about computational challenges 
-            in genomics, transcriptomics, single cell analysis, genome editing and network analysis.
-        </p>
-        
-        <p>    
-            The ideal candidate should have received (or expect to receive soon) a Ph.D. in Computer Science, 
-            Statistics, Genetics, Bioinformatics, Computational Biology, Mathematics, Physics, or related fields.
-        </p>
-        
-        <p>
-            The lab can also host visiting Phd students interested in collaborative projects on shared research 
-            topics of the lab.
-        </p>
+    </div>
+    <!--
+        ***************************************************
+        GMotterle.html content end
+        ***************************************************
+    --> 
+    
 
-        <p>
-            If you are interested, please send your CV and a cover letter describing your current and future research 
-            interests, and the contact of 2-3 references to our CEO prof.Rosalba Giugno:
-        </p>
-
-        <p><strong>rosalba.giugno@univr.it</strong></p>
-		<a href="#" class="button"> Download the application format</a>
-	</div>
+    <!--
+		*****************************
+		Bottom Portfolio begin
+		*****************************
+	-->
 	<div id="portfolio-wrapper">
 		<div id="portfolio" class="container">
 			<div class="title">
@@ -117,7 +172,13 @@ Released   : 20140119
 					<a href="#" class="button">Etiam posuere</a> </div>
 			</div>
 		</div>
-	</div>
+    </div>
+    <!--
+		*****************************
+		Bottom Portfolio begin
+		*****************************
+    -->
+    
 
 </div>
 <div id="footer">
@@ -125,3 +186,15 @@ Released   : 20140119
 </div>
 </body>
 </html>
+<!--
+Credits:
+
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : Reciprocal 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20140119
+-->
