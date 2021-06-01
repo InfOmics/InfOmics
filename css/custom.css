@@ -1,0 +1,286 @@
+.navbar-brand{
+    margin-left: 2em;
+}
+#navbarSupportedContent ul{
+    align-items: center;
+}
+.head-section-home{
+    background:url("../img/hero.svg") no-repeat top 0 right -69px/126%,linear-gradient(to right,#bda85c,#bda85c)
+}
+.head-section-people{
+    background:url("../img/hero.svg") no-repeat top 0 right -69px/126%,linear-gradient(to right,#d5b7e8,#d5b7e8)
+}
+.head-section-software{
+    background:url("../img/hero.svg") no-repeat top 0 right -69px/126%,linear-gradient(to right,#e87860,#e87860)
+}
+.head-section-publications{
+    background:url("../img/hero.svg") no-repeat top 0 right -69px/126%,linear-gradient(to right,#a9b8ab,#a9b8ab)
+}
+.head-section-news{
+    background:url("../img/hero.svg") no-repeat top 0 right -69px/126%,linear-gradient(to right,#b53d50,#b53d50)
+}
+.research-topic-one{
+    background:url("../img/hero.svg") no-repeat top 0 right 169px/98%,linear-gradient(to right,#e87860,#e87860);
+    padding-top: 2em;
+    padding-bottom: 2em;
+    text-align: justify;
+    color: #313131;
+    margin-bottom: 1em;
+}
+.contact-and-info{
+    background:url("../img/hero.svg") no-repeat top 0 right 169px/150%,linear-gradient(to right,#d5b7e8,#d5b7e8);
+}
+.research-topic-two{
+    background:url("../img/hero.svg") no-repeat top 0 right 69px/120%,linear-gradient(to right,#a9b8ab,#a9b8ab);
+    padding-top: 2em;
+    padding-bottom: 2em;
+    text-align: justify;
+    color: #313131;
+    margin-bottom: 1em;
+}
+.research-topic-three{
+    background:url("../img/hero.svg") no-repeat top 0 right -169px/70%,linear-gradient(to right,#b53d50,#b53d50);
+    padding-top: 2em;
+    padding-bottom: 2em;
+    text-align: justify;
+    color: #313131;
+}
+.head-section-software a:hover,.head-section-software .presentation a:hover{
+    color:#292929c7;
+}
+a:hover{
+    color:#292929c7
+}
+.head-section nav{
+    background-color: #ffffff1a;
+}
+a{
+    color: white;
+    text-decoration: underline;
+}
+.container-people a{
+    color: black;
+}
+.container-people a:hover{
+    color: rgb(123, 123, 123);
+}
+.head-section button{
+    color:white
+}
+.container-md-home{
+    text-align: center;
+    color: #313131;
+}
+.container-md-home .col-12{
+    margin-top: 2em;
+}
+.container-md-home .row{
+    padding-bottom: 2em;
+}
+
+.vertical_align{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+@media (min-width: 991px) { 
+    .vertical_align_important{
+        display: flex!important;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+.presentation-text{
+    text-align: center;
+    max-width: 32em;
+    margin:auto;
+    color: white;
+}
+.presentation-text-home{
+    color: black;
+}
+.group-logo{
+    width: 70%;
+    max-width: 20em;
+    display:block;
+    margin: auto;
+}
+.people-photo{
+    width: 100%;
+}
+.presentation p{
+    display: inline;
+    font-size: 1.1em;
+}
+
+.row{
+    margin-top: 2em;
+    justify-content: space-around;
+}
+.accordion h2, .accordion .accordion-collapse{
+    border: white;
+}
+
+.container-people h2, .container-people h3{
+    font-size: 2em;
+    color: #c76704;
+}
+.container-people h3{
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+.other-members{
+    text-align: center;
+}
+.other-members{
+    align-items: center;
+}
+.other-members p{
+    display: inline;
+    
+}
+.card .accordion-button{
+    display: block;
+}
+.accordion-button h2{
+    font-size: 1.2em;
+}
+.container-people .card-text{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+#map{
+    margin-top: 3em;
+}
+.container-contact{
+    margin-bottom: 2em;
+}
+.container-contact p{
+    margin:0;
+}
+.container-contact h3{
+    font-size: 1.4em;
+    margin:0;
+    margin-top: 1em;
+}
+
+.publications-container{
+    margin-top: 4em;
+}
+.publications-container .card, .container-people .card, .container-software .card{
+    margin-bottom: 2em;
+}
+.container-people .card{
+    font-size: 0.8em;
+}
+.software-row{
+    border-bottom: 5px solid #D1D4D7;
+    padding-top: 24px!important;
+    padding-bottom: 24px!important;
+    text-align: justify;
+    color: #313131;
+}
+.software-row img{
+    width: 100%;
+    margin-top:2em;
+}
+.button-size{
+    width: 150px;
+    padding-top: 5px!important;
+    padding-bottom: 5px!important 
+}
+.container-news img{
+    width: 100%;
+}
+.container-news h2, .container-news h3{
+    text-align: center;
+}
+.container-news h2{
+    margin-top: 2em;
+    color:#1f1e97
+}
+.container-news h3{
+    color: #54a1c1;
+}
+.container-news h3 a{
+    color: #54a1c1;
+}
+.container-news .row .col-12{
+    margin-top: 3em;
+}
+.container-news .row{
+    margin:0;
+}
+
+.container-news a{
+    color: black;
+}
+
+.video{
+    margin-top: 2em;
+}
+.research-topic-three img, .research-topic-one img,.research-topic-two img{
+    max-width: 100%;
+}
+.presentation{
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+.presentation .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.presentation h1, .presentation h2{
+    color: white;
+}
+.index h1{
+    text-align: center;
+    margin: 0.5em;
+}
+.index h2{
+    text-align: center;
+}
+
+#accordionFlushExample button{
+    text-align: left;
+}
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #00000087; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 5px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+  
+#myBtn:hover {
+background-color: #555; /* Add a dark-grey background on hover */
+}
+.meme iframe{
+    width: 100%;
+}
+.meme{
+    margin-top: 2em;
+}
+@media (max-width: 420px) { 
+    .meme iframe{
+        height: 20em;
+    }
+}
+.positions{
+    margin-bottom: 3em;
+}
