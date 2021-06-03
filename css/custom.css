@@ -83,6 +83,7 @@ a{
     justify-content: center;
     align-items: center;
     text-align: center;
+    flex-direction: column;
 }
 @media (min-width: 991px) { 
     .vertical_align_important{
@@ -90,6 +91,7 @@ a{
         justify-content: center;
         align-items: center;
         text-align: center;
+        flex-direction: column;
     }
 }
 
