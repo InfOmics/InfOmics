@@ -285,4 +285,11 @@ background-color: #555; /* Add a dark-grey background on hover */
 }
 .positions{
     margin-bottom: 3em;
+    margin-top: 3em;
+}
+
+.openpositions{
+    text-align: center;
+    margin-bottom: 3em;
+    color: #1f1e97;
 }
