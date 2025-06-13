@@ -293,3 +293,77 @@ background-color: #555; /* Add a dark-grey background on hover */
     margin-bottom: 3em;
     color: #1f1e97;
 }
+
+/* tmp 
+
+/* === Partners Section === */
+.partners-section-textual {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 60px 0;
+}
+
+.partners-section-textual .section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 40px;
+  color: #000000;
+}
+
+.partner-entry {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: nowrap;
+}
+
+.partner-entry img {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.partner-entry img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+.partner-description {
+  flex: 1;
+  min-width: 0;
+}
+
+.partner-description h5 {
+  margin-top: 0;
+  color: #000000;
+}
+
+.partner-description a {
+  color: #0066cc;
+  text-decoration: underline;
+}
+
+.partner-description a:hover {
+  color: #003366;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .partner-entry {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .partner-description {
+    margin-top: 20px;
+  }
+}
